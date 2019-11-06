@@ -10,4 +10,4 @@ COPY package*.json ./
 EXPOSE 80
 COPY . .
 RUN npm install
-ENTRYPOINT ["/bin/bash", "-c", "npm run prod"]
+ENTRYPOINT ["/bin/bash", "-c", "node main.js"]
