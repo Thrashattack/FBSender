@@ -7,9 +7,10 @@
     "doc": "doc"
   },
   "scripts": {
-    "prod": "run-build",
-    "dev": "run-dev",
-    "test": "run-test"
+    "prod": "pm2 start main.js",
+    "prod_stop": "pm2 stop main",
+    "dev": "nodemon index.js --watch ./",
+    "test": "nodemon tests/main.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "facebook-chat-api": "^1.6.1"
+    "facebook-chat-api": "^1.6.1",
+    "pm2": "^4.1.2"
   }
 }
