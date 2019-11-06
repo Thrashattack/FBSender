@@ -17,7 +17,7 @@ module.exports = app => {
             try {
                 const result = await app.src.service.FBSender(req.body.ids, req.body.msg, req.body.login, req.body.pass);
                 if (result == 0) {
-                    res.status(500)
+                    res.status(400)
                     res.send("Erro!, verifique credenciais e autorizações do perfil");
                     res.end();
                     return;
