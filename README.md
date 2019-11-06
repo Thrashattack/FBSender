@@ -1,6 +1,7 @@
 # Facebook Message Sender API
 
-#instalação 
+# Instalação 
+
 * Requisito: Node.js >= v10
 
 > npm i 
@@ -16,7 +17,7 @@
 # Produção 
 * pm2 daemon 
 
-> npm run prod 
+> npm run prod <br />
 > npm run prod_stop 
 
 
