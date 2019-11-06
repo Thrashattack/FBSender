@@ -1,9 +1,9 @@
-const login = require("facebook-chat-api");
+FB = require("facebook-chat-api");
 module.exports = app => {
-    return send = (ids, msg, login, pass) => {
-        count = 0;
-        login({ email: login, password: pass }, (err, api) => {
-            if (err) return console.error(err);
+    return send = async (ids, msg, login, pass) => {
+        await FB({ email: login, password: pass }, (err, api) => {
+            count = 0;
+            if (err) return err;
             if (ids.length == 1) {
                 const yourID = ids[0];
                 api.sendMessage(msg, yourID);
@@ -19,7 +19,7 @@ module.exports = app => {
                     count++;
                 }
             }
+            return count;
         });
-        return count;
     }
 }

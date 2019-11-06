@@ -7,8 +7,7 @@ const consign = require('consign');
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
-
+app.use(bodyParser.json())
 consign()
     .include('./src/service/')
     .then('./src/controller/')
