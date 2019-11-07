@@ -8,7 +8,8 @@
   },
   "scripts": {
     "prod": "pm2 start main.js",
-    "prod_stop": "pm2 stop main",
+    "prod_stop": "pm2 stop main.js",
+    "prod_restart": "pm2 restart main.js",
     "dev": "nodemon index.js --watch ./",
     "test": "nodemon tests/main.js"
   },

@@ -84,21 +84,28 @@
 # DevOps 
 
 * Atualizar pra ultima versão 
+<br />
 > $ git pull 
 
 
 * Reiniciar serviço da API (Produção)
+<br />
 > $ pm2 restart main.js 
  ou 
+<br />
 > $ npm run prod_restart 
 
 
 * Iniciar o servidor de desenvolvimento (Necessário parar o produção ou alterar a porta em main.js)
+<br />
 > $ npm run dev 
 
 * Ao alterar o código 
+<br />
 > $ git add .
+<br />
 > $ git commit -m "O que foi alterado?" 
+<br />
 > $ git push 
 
 
