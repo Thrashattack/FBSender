@@ -80,3 +80,27 @@
         data: "Erro!, Mensagem ${StackTrace}"
     }
 ```
+
+# DevOps 
+
+* Atualizar pra ultima versão 
+> $ git pull 
+
+
+* Reiniciar serviço da API (Produção)
+> $ pm2 restart main.js 
+ ou 
+> $ npm run prod_restart 
+
+
+* Iniciar o servidor de desenvolvimento (Necessário parar o produção ou alterar a porta em main.js)
+> $ npm run dev 
+
+* Ao alterar o código 
+> $ git add .
+> $ git commit -m "O que foi alterado?" 
+> $ git push 
+
+
+
+
