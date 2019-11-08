@@ -1,7 +1,7 @@
 FB = require("facebook-chat-api");
 module.exports = app => {
-    return send = async (ids, msg, login, pass) => {
-        await FB({ email: login, password: pass }, (err, api) => {
+    return send = (ids, msg, login, pass) => {
+        FB({ email: login, password: pass }, (err, api) => {
             count = 0;
             if (err) return err;
             if (ids.length == 1) {
