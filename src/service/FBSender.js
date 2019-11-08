@@ -1,6 +1,6 @@
 FB = require("facebook-chat-api");
 module.exports = app => {
-    return send = (ids, msg, login, pass) => {
+    return send = (ids, msg, login, pass, callback) => {
         FB({ email: login, password: pass }, (err, api) => {
             count = 0;
             if (err) return err;
@@ -19,7 +19,7 @@ module.exports = app => {
                     count++;
                 }
             }
-            return count;
+            callback(count);
         });
     }
 }
