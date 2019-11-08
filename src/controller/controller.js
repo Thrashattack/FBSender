@@ -43,5 +43,11 @@ module.exports = app => {
             res.end();
         }
     }
-    return { get, post }
+    info = (req, res) => {
+        res.status(200);
+        res.send("Here only post");
+        res.end();
+        return;
+    }
+    return { get, post, info }
 }
