@@ -12,10 +12,10 @@ module.exports = app => {
             res.end();
         }
     }
-    post = (req, res) => {
+    post = async (req, res) => {
         if (req.query.token == Token) {
             try {
-                const result = app.src.service.FBSender(req.body.ids, req.body.msg, req.body.login, req.body.pass);
+                const result = await app.src.service.FBSender(req.body.ids, req.body.msg, req.body.login, req.body.pass);
                 if (result == 0) {
                     res.status(400)
                     res.send("Erro!, verifique credenciais e autorizações do perfil");
